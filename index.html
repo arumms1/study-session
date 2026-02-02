@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Tracker Pro</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Study Tracker Pro</h1>
+
+  <div class="form">
+    <input type="text" id="subject" placeholder="Materi belajar...">
+    <input type="number" id="sessions" placeholder="Target sesi (1 sesi = 25 menit)">
+    <button onclick="addStudy()">Tambah</button>
+  </div>
+
+  <div class="progress-section">
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+    <p id="progressText"></p>
+  </div>
+
+  <div class="audio-control">
+    <label>Volume Musik</label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+  </div>
+
+  <div class="stats">
+    <p id="todayStats"></p>
+    <p id="totalStats"></p>
+  </div>
+
+  <ul id="studyList"></ul>
+</div>
+
+<!-- AUDIO -->
+<audio id="relaxMusic">
+  <source src="relax.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="alarmSound">
+  <source src="alarm.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
